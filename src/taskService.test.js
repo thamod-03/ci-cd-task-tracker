@@ -37,6 +37,12 @@ describe("createTask", () => {
     expect(task.id).toEqual(expect.any(Number));
   });
 
+  test("creates a task with medium priority", () => {
+    const task = createTask("Learn branches");
+
+    expect(task.priority).toBe("medium");
+  });
+
   test("removes extra spaces from the task text", () => {
     const task = createTask("   Learn automated testing   ");
 

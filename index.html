@@ -3,10 +3,7 @@
   <head>
     <meta charset="UTF-8" />
 
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <meta
       name="description"
@@ -36,6 +33,14 @@
               autocomplete="off"
             />
 
+            <select id="priority-select">
+              <option value="low">Low</option>
+
+              <option value="medium" selected>Medium</option>
+
+              <option value="high">High</option>
+            </select>
+
             <button type="submit">Add Task</button>
           </div>
 
@@ -43,13 +48,9 @@
         </form>
 
         <div class="filter-buttons">
-          <button class="filter-button active" data-filter="all">
-            All
-          </button>
+          <button class="filter-button active" data-filter="all">All</button>
 
-          <button class="filter-button" data-filter="pending">
-            Pending
-          </button>
+          <button class="filter-button" data-filter="pending">Pending</button>
 
           <button class="filter-button" data-filter="completed">
             Completed
