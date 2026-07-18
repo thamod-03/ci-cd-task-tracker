@@ -11,6 +11,7 @@ export function createTask(taskText) {
     id: Date.now(),
     text: taskText.trim(),
     completed: false,
+    priority: "medium",
   };
 }
 

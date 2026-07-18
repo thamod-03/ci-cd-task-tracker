@@ -18,6 +18,8 @@ const taskCount = document.querySelector("#task-count");
 const completedCount = document.querySelector("#completed-count");
 const filterButtons = document.querySelectorAll(".filter-button");
 
+const prioritySelect = document.querySelector("#priority-select");
+
 let tasks = loadTasks();
 let currentFilter = "all";
 
@@ -60,7 +62,7 @@ function renderTasks() {
     });
 
     const taskText = document.createElement("span");
-    taskText.textContent = task.text;
+    taskText.textContent = `${task.text} (${task.priority})`;
 
     const deleteButton = document.createElement("button");
     deleteButton.className = "delete-button";
@@ -122,6 +124,8 @@ taskForm.addEventListener("submit", (event) => {
 
   try {
     const newTask = createTask(taskText);
+
+    newTask.priority = prioritySelect.value;
 
     tasks.push(newTask);
 
